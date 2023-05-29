@@ -75,7 +75,7 @@ p {
 .image-row .image-wrapper {
   display: inline-block;
   vertical-align: middle;
-  width: 30%; /* adjust this value to your desired size */
+  width: 30%; 
   height: auto;
   margin: 20px;
   position: relative; /* to make the overlay position relative to the image-wrapper */
@@ -112,7 +112,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 50px; /* adjust this value to your desired size */
+  font-size: 50px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
