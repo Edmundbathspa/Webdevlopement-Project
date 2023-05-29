@@ -1,0 +1,172 @@
+/* CSS Document */
+body {
+  font-family: "Syne", sans-serif;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header and nav styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  margin-top: 20px;
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-top: 20px;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #b1d6d3;
+}
+
+/* Main styles */
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/*life images styling*/
+.image-row {
+  position: relative; /* to make the overlay position relative to the images */
+}
+
+.image-row .image-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%; /* adjust this value to your desired size */
+  height: auto;
+  margin: 20px;
+  position: relative; /* to make the overlay position relative to the image-wrapper */
+}
+
+.image-row .image-wrapper img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease; /* to add a transition effect to the blur */
+  border-radius: 10px;
+}
+
+.image-row .image-wrapper:hover img {
+  filter: blur(5px); /* to apply a blur effect on hover */
+}
+
+.image-row .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* to make the overlay invisible by default */
+  transition: opacity 0.3s ease; /* to add a transition effect to the overlay */
+}
+
+.image-row .image-wrapper:hover .overlay {
+  opacity: 1; /* to make the overlay visible on hover */
+}
+
+.image-row .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px; /* adjust this value to your desired size */
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.image-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  z-index: 1;
+}
+
+/* Footer styles */
+footer {
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+/*splash screen styles*/
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 200;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 90vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: -10;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 90vh;
+  transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}

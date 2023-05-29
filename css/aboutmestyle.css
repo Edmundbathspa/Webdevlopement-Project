@@ -1,0 +1,152 @@
+* {
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+}
+
+/* Header and nav styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  margin-top: 20px;
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-top: 20px;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #b1d6d3;
+}
+
+/*main styles*/
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+body .container {
+  width: 100vw;
+  height: 100%;
+}
+
+body .container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+body .container article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .container section:nth-of-type(1) {
+  color: green;
+}
+
+body .container section:nth-of-type(2) {
+  color: #233ab9;
+}
+
+body .container section:nth-of-type(3) {
+  color: #5be25b;
+}
+
+body .container section:nth-of-type(4) {
+  color: #e61c1c;
+}
+
+body .container section h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7em;
+}
+
+/*footer styling*/
+footer {
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-top: auto;
+}
+
+/*splash screen styles*/
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 200;
+  color: white;
+  text-align: center;
+  line-height: 90vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: -10;
+  color: white;
+  text-align: center;
+  line-height: 90vh;
+  transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.splash h1 {
+  font-size: 10em;
+}
